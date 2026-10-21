@@ -1,0 +1,25 @@
+{
+  "name": "kasher-almahal",
+  "version": "1.0.0",
+  "description": "Kasher Al-Mahal POS",
+  "author": "Kasher",
+  "main": "electron/main.js",
+  "scripts": { "start": "electron ." },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/filesystem": "^6.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.kasher.almahal",
+    "productName": "KasherAlMahal",
+    "directories": { "output": "dist" },
+    "files": ["electron/**", "www/**", "package.json"],
+    "win": { "target": ["nsis", "portable"] }
+  }
+}
